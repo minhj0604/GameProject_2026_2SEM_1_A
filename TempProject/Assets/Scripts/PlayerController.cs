@@ -7,6 +7,7 @@ public enum PlayerState
 {
     Normal,
     PickUp,
+    inventory
 }
 
 
@@ -55,7 +56,7 @@ public class PlayerController : MonoBehaviour
 
 
 
-        
+
     }
 
     private void ApplyGravity()
@@ -136,4 +137,8 @@ public class PlayerController : MonoBehaviour
         Debug.Log("현재 상태 : " + currentState);
     }
 
+    public bool IsNormalState()
+    {
+        return currentState == PlayerState.Normal;
+    }
 }
